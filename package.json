@@ -1,0 +1,55 @@
+{
+  "name": "app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "electron:dev": "cross-env NODE_ENV=development electron electron/main.js",
+    "electron:build": "next build && electron-builder",
+    "start-dev": "concurrently \"npm run dev\" \"npm run electron:dev\""
+  },
+  "main": "electron/main.js",
+  "dependencies": {
+    "@mediapipe/hands": "^0.4.1646424915",
+    "@tensorflow-models/hand-pose-detection": "^2.0.0",
+    "@tensorflow/tfjs-backend-wasm": "^4.0.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.0.0",
+    "@tensorflow/tfjs-converter": "^4.0.0",
+    "@tensorflow/tfjs-core": "^4.0.0",
+    "next": "13.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "scatter-gl": "0.0.8"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.1",
+    "cross-env": "^7.0.3",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "electron/",
+      ".next/",
+      "app/"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  }
+}
