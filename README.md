@@ -21,7 +21,7 @@ Este projeto demonstra a detecção de poses de mãos utilizando TensorFlow.js, 
 - [scatter-gl](https://github.com/PAIR-code/scatter-gl) - Visualização 3D para gráficos de dispersão.
 - [React](https://reactjs.org/) - Biblioteca JavaScript para construção de interfaces de usuário.
 - [Next.js](https://nextjs.org/) - Framework React para renderização no lado do servidor.
-- [Docker](https://www.docker.com/) - Plataforma de containers para construir e executar aplicações.
+- [Electron](https://github.com/electron/electron) - Framework que permite escrever aplicativos de desktop multiplataforma usando JavaScript, HTML e CSS.
 
 ## Instalação
 
